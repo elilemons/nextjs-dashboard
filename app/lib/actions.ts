@@ -77,10 +77,6 @@ export async function updateInvoice( id: string, prevState: State, formData: For
     status: formData.get('status'),
   })
 
-  // TODO Remove this test code
-  console.log('ELITEST', { validatedFields });
-  // ^ TODO Remove this test code
-
   // If form validation fails, return errors early. Otherwise, continue.
   if (!validatedFields.success) {
     return {
